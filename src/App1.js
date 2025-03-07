@@ -1,5 +1,5 @@
 export default function App1(){
     return (
-        <p>This is a para</p>
+        <div style={{backgroundColor:'yellow'}}>APP1</div>
     )
 }
