@@ -42,13 +42,21 @@
 import Header from "./components/Header";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart"
+import Login from "./components/Login";
+import { BrowserRouter,Route,Routes } from "react-router-dom";
 function App(props) {
   return (
-    <div>
+      <BrowserRouter>
       <Header />
-      <Products />
+      <Routes>
+        <Route index element={<Products />}/>
+        <Route path="home" element={<Products />}/>
+        <Route path="cart" element={<Cart />}/>
+        <Route path="login" element={<Login />}/>
+      </Routes>
       <Footer/>
-    </div>
+      </BrowserRouter>
   );
 }
 export default App;
